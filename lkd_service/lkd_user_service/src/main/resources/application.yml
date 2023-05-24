@@ -1,0 +1,40 @@
+server:
+  port: 9006
+spring:
+  application:
+    name: user-service
+  cloud:
+    nacos:
+      server-addr: 192.168.200.128
+    alicloud:
+      access-key: LTAI4Frk7UF5C4dupvaHfopQ
+      secret-key: 1FH7Bxe3lrYFmqrIXqWjM0x4VAHpXR
+  datasource:
+    url: jdbc:mysql://192.168.200.128:3306/lkd_user?useUnicode=true&autoReconnect=true&autoReconnectForPools=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+  redis:
+    host: 192.168.200.128
+    port: 6379
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ribbon:
+  eager-load:  #ribbon的饥饿加载，系统启动时就初始化
+    enabled: true
+    clients: user-service,task-service
+hystrix:  #熔断器超时配置
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+
+lkd:
+  sms:
+    key: LTAI5tNmH22y9C7AxdFEgdNv
+    secret: AHGC0JSnBuYtYg3BnNvyTuwlwyl27n
+    sign-name: 阿里云短信测试
+    template-code: SMS_154950909

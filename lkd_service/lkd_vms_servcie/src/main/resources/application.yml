@@ -1,0 +1,34 @@
+server:
+  port: 9004
+spring:
+  application:
+    name: vm-service
+  cloud:
+    nacos:
+      server-addr: 192.168.200.128
+  datasource:
+    url: jdbc:mysql://192.168.200.128:3306/lkd_vms?useUnicode=true&autoReconnect=true&autoReconnectForPools=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+ribbon:
+  eager-load:  #ribbon的饥饿加载，系统启动时就初始化
+    enabled: true
+    clients: user-service,task-service
+hystrix:  #熔断器超时配置
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 3000
+
+minio:
+  accessKey: minio
+  secretKey: minio123
+  bucket: lkd
+  endpoint: http://192.168.200.128:9001
+  readPath: http://192.168.200.128:9001
