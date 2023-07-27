@@ -14,6 +14,6 @@ public class SmsTemplateTest {
 
     @Test
     public void testSendSMS(){
-        smsTemplate.sendSms("手机号", "123456");
+        smsTemplate.sendSms("15239505861", "123456");
     }
 }

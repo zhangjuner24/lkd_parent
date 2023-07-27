@@ -233,4 +233,10 @@ public class UserController {
         return userService.searchUserWork(pageIndex,pageSize,userName,roleId,isRepair) ;
     }
 
+    // 发送短信验证码登录
+    @GetMapping("/code/{mobile}")
+    public void sendSms(@PathVariable("mobile") String mobile) {
+        userService.sendSms(mobile);
+    }
+
 }

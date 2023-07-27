@@ -69,4 +69,7 @@ public interface UserService extends IService<UserEntity> {
      * @return
      */
     Pager<UserWorkVO> searchUserWork(Long pageIndex, Long pageSize, String userName, Integer roleId, Boolean isRepair  );
+
+    void sendSms(String mobile);
+
 }

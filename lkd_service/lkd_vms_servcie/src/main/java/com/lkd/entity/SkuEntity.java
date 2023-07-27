@@ -19,7 +19,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName("tb_sku")
+@TableName(value = "tb_sku",autoResultMap = true,resultMap = "skuMap")
 public class SkuEntity implements Serializable {
 
     @TableId("sku_id")

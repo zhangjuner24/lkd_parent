@@ -7,8 +7,8 @@ spring:
     nacos:
       server-addr: 192.168.200.128
     alicloud:
-      access-key: LTAI4Frk7UF5C4dupvaHfopQ
-      secret-key: 1FH7Bxe3lrYFmqrIXqWjM0x4VAHpXR
+      access-key: LTAI5tNJDxygqkFJGfsGyrPq
+      secret-key: CNphca4PY4s1vBXKwAWuVj7Ia3e1gr
   datasource:
     url: jdbc:mysql://192.168.200.128:3306/lkd_user?useUnicode=true&autoReconnect=true&autoReconnectForPools=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai
     username: root
@@ -34,7 +34,7 @@ hystrix:  #熔断器超时配置
 
 lkd:
   sms:
-    key: LTAI5tNmH22y9C7AxdFEgdNv
-    secret: AHGC0JSnBuYtYg3BnNvyTuwlwyl27n
+    key: LTAI5tNJDxygqkFJGfsGyrPq
+    secret: CNphca4PY4s1vBXKwAWuVj7Ia3e1gr
     sign-name: 阿里云短信测试
     template-code: SMS_154950909

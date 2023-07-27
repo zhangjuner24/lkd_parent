@@ -14,6 +14,5 @@ import com.lkd.http.controller.vo.Pager;
 public interface SkuService extends IService<SkuEntity> {
 
 
-
-
+    Pager<SkuEntity> search(Integer pageIndex, Integer pageSize, String skuName, Long classId);
 }

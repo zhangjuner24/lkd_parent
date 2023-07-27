@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
-@TableName(value = "tb_vending_machine")
+@TableName(value = "tb_vending_machine",autoResultMap = true,resultMap = "vmResult")
 public class VendingMachineEntity implements Serializable {
 
     /**
